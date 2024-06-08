@@ -1,1 +1,8 @@
-# Pattern-recognition
+Overview
+This project implements advanced feature extraction techniques for image pattern recognition using Local Binary Patterns (LBP) and its orthogonal variations. Specifically, the code includes the implementation of Horizontal Orthogonal Neighbor LBP (HON-LBP), Vertical Orthogonal Neighbor LBP (VON-LBP), and Multiplied Orthogonal Neighbor LBP (MON-LBP). These methods enhance the standard LBP by incorporating orthogonal neighborhood information, thereby improving the robustness and discriminative power of the extracted features.
+
+Functionality
+The code provides functions to compute these LBP-based features for both single images and batches of images, facilitating large-scale image analysis. Additionally, it includes visualization tools to display the computed features and their histograms, aiding in understanding the feature extraction process. The project also covers pre-processing steps, such as resizing and grayscale conversion, to prepare images for feature extraction. The extracted features are stored in CSV files, making them readily available for subsequent machine learning tasks.
+
+Application
+Using the extracted features, the code demonstrates the training and evaluation of deep learning models, specifically leveraging the VGG16 architecture. The project includes scripts for loading and pre-processing the Cats and Dogs dataset, extracting features, and training models with appropriate callbacks for early stopping and learning rate reduction. This comprehensive approach ensures efficient model training and evaluation, showcasing the potential of these enhanced LBP features in improving image classification tasks.
