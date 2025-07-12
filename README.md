@@ -14,14 +14,14 @@ Each of the proposed methods introduces a distinct way of integrating orthogonal
 
 The Horizontal Orthogonal Information (HOI) and Vertical Orthogonal Information (VOI) variants extract directional bits from the outer columns and rows of the 5x5 pixel window, respectively. These are converted into binary codes and fused with the standard LBP of the center pixel. The fusion step—using bitwise AND—ensures that only meaningful, directionally reinforced texture information is retained.
 
-**[Insert Image Here: `images/hoi_voi_image.png`]**  
+![System Architecture](images/hoi_voi_image.png)  
 *Figure: Illustration of HOI-LBP and VOI-LBP extraction process. The image shows how horizontal and vertical patterns from the 5x5 neighborhood are encoded and fused with standard LBP.*
 
 ### MOI-LBP
 
 MOI-LBP takes the fusion a step further by combining both HOI and VOI outputs and multiplying them with the LBP value of the center pixel. This yields a composite texture descriptor that captures orthogonal interactions in multiple directions.
 
-**[Insert Image Here: `images/moi_lbp_image.png`]**  
+![System Architecture](images/moi_lbp_image.png)  
 *Figure: Diagram of MOI-LBP logic. It shows how horizontal and vertical bit patterns are combined and fused with the central LBP to generate enhanced texture features.*
 
 The features produced by these variants were extracted from two benchmark image datasets—Dogs vs Cats and Fashion MNIST—and used as inputs to CNN architectures including VGG-16, MobileNet, and EfficientNetB0. Each model was trained using LBP and the proposed variants to measure the impact on classification performance.
@@ -34,13 +34,13 @@ On the Dogs vs Cats dataset, EfficientNetB0 combined with MOI-LBP achieved a val
 
 These results are supported not only by accuracy metrics, but also by training behavior. Models trained on the fused features converged faster and exhibited fewer signs of overfitting, as seen in the loss curves and early stopping triggers.
 
-**[Insert Image Here: `images/results_dvc.png`]**  
+![System Architecture](images/catsvsdogs_image.png)    
 *Figure: Classification performance comparison on the Dogs vs Cats dataset. The figure shows training and validation accuracy across various CNN models using different LBP-based features.*
 
-**[Insert Image Here: `images/results_fmnist.png`]**  
+![System Architecture](images/fashion.png)   
 *Figure: Classification results on Fashion MNIST using standard LBP and Ortho-LBP variants. MOI-LBP consistently leads in performance.*
 
-**[Insert Image Here: `images/diff_metrics.png`]**  
+![System Architecture](images/diff_result.png)   
 *Figure: Summary of performance improvement metrics when using MOI-LBP over traditional LBP. This includes differences in training/validation accuracy and model loss.*
 
 ## Conclusion
