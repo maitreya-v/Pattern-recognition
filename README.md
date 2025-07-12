@@ -26,6 +26,8 @@ MOI-LBP takes the fusion a step further by combining both HOI and VOI outputs an
 
 The features produced by these variants were extracted from two benchmark image datasets—Dogs vs Cats and Fashion MNIST—and used as inputs to CNN architectures including VGG-16, MobileNet, and EfficientNetB0. Each model was trained using LBP and the proposed variants to measure the impact on classification performance.
 
+![System Architecture](images/result.png) 
+
 ## Results and Discussion
 
 Our experiments demonstrated that the proposed variants led to measurable improvements in classification performance across both datasets. MOI-LBP in particular showed the highest accuracy and lowest validation loss, outperforming traditional LBP in nearly every scenario.
